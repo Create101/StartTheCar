@@ -25,4 +25,9 @@ public class ClientApi {
         return hiInter.sayHello();
     }
 
+    @GetMapping(value = "/zuul")
+    public String sayZuul(){
+        return "这是Client!";
+    }
+
 }

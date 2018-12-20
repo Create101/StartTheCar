@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 public class RestServer {
 
     public String test(){
-        return "Hello World 8084";
+        return "这是Service2!s";
     }
 
 }
