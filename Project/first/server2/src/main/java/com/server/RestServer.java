@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 public class RestServer {
 
     public String test(){
-        return "这是Service2!s";
+        return "这是Service2!";
     }
 
 }
