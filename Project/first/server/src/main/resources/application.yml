@@ -8,8 +8,17 @@ spring:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://peer1:8081/eureka
+      defaultZone: http://localhost:8081/eureka
   server:
     enable-self-preservation: false
     eviction-interval-timer-in-ms: 4000
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+      cors:
+        allowed-origins: "*"
+        allowed-methods: "*"
 foo: local
