@@ -1,9 +1,9 @@
 server:
-  port: 8086
+  port: 8091
 
 spring:
   application:
-    name: service-client
+    name: service-turbine
 
 eureka:
   client:
@@ -21,7 +21,11 @@ management:
       cors:
         allowed-origins: "*"
         allowed-methods: "*"
-feign:
-  hystrix:
-    enabled: true
-
+turbine:
+  app-config: service-server,service-client
+  aggregator:
+    clusterConfig: default
+  clusterNameExpression: new String("default")
+  combine-host: true
+  instanceUrlSuffix:
+    default: actuator/hystrix.stream
